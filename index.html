@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>没用的吴家乐</title>
+<style>
+  body {
     font-family: 'Arial', sans-serif;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
+    min-height: 100vh;
+  }
 
-.player {
-    border: 1px solid #fff;
+  .card {
+    background-color: #d9d8d4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 8px;
-}
+    text-align: center;
+    width: 400px;
+  }
 
-.song-list, .lyrics-display {
-    max-height: 200px;
-    overflow-y: scroll;
-    margin: 10px 0;
-}
+  .header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
 
-.lyrics-display p {
-    opacity: 0.5;
-    transition: opacity 0.3s;
-}
+  .message {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
 
-.lyrics-display p.active {
-    opacity: 1;
-}
-    </style>
-    <title>没用的吴家乐</title>
+  .cake {
+    width: 100px;
+    margin: 0 auto 20px;
+  }
+
+  .footer {
+    font-size: 14px;
+    color: #999;
+  }
+</style>
 </head>
 <body>
-    <div class="player">
-        <audio id="audio" controls></audio>
-        <ul class="song-list"></ul>
-        <div class="lyrics-display"></div>
-        <button id="prev">上一首</button>
-        <button id="next">下一首</button>
-        <select id="playMode">
-            <option value="list">列表循环</option>
-            <option value="single">单曲循环</option>
-            <option value="random">随机播放</option>
-        </select>
-    </div>
-    <script src="main.js"></script>
+  <div class="card">
+    <div class="header">2023-09-19<br>读点书可以啵<br></div>
+    <div class="message">吴家乐<br>不要狗叫了</div>
+  </div>
 </body>
 </html>
