@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>表单元素</title>
+    <title>编程语言</title>
+    <style>
+        input {
+            font: 700 30px "宋体";
+            color: aqua;
+
+        }
+
+        div {
+            line-height: 700px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <form action="XXX.php" method="get" target="_blank">
-        <!-- text 文本框 用户可以在里面输入任何文字 -->
-        用户名：<input type="text"  placeholder="请输入用户名" name="username" /> <br />
-        <!-- password 密码框 用户看不见里面输入的密码 -->
-        密码：<input type="password" placeholder="请输入密码"  maxlength="6" name="password" /><br />
-        <!-- radio 单选按钮 可以实现多选一 -->
-        <!-- name 是表单元素名字 这里性别单选按钮必须有相同的名字name 才可以实现多选1 -->
-        性别：男 <input type="radio" name="sex" value="男" /> 女 <input type="radio" name="sex" value="女" /><br />
-        <!-- 点击了提交按钮，可以把表单域form里面的表单元素里面的值提交给后台服务器 -->
-        <input type="submit" value="立即注册" />
-        <!-- 重置按钮可以还原表单元素初始的默认状态 -->
-        <input type="reset" value="重新设置" />
-        <!-- 普通按钮 button 后期结合JS搭配使用-->
-        <input type="button" value="获取短信验证码" /><br />
-        <!-- 文件域 使用场景 上传文件使用的 -->
-        选择头像：<input type="file" />
-    </form>
+    <div><input type="button" value=" 世界上最好的朋友" onclick="alert('和小易天下第一好')"></div>
 </body>
+
 </html>
