@@ -4,23 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>编程语言</title>
-    <style>
-        input {
-            font: 700 30px "宋体";
-            color: aqua;
-
-        }
-
-        div {
-            line-height: 700px;
-            text-align: center;
-        }
-    </style>
+    <title>银行系统模拟</title>
+    <script>
+        do {
+            var account = prompt('请输入账号');
+            if (account != '2332333') {
+                alert('该账号尚未注册');
+            }
+        } while (account != '2332333');
+        do {
+            var password = prompt('请输入密码');
+            if (password != 'wujiale') {
+                alert('密码错误');
+            }
+        } while (password != 'wujiale');
+        alert('登入成功！');
+        var exit = 0;
+        var surplus = 1000;
+        do {
+            var select = prompt('您需要什么服务\n1.存款\n2.取款\n3.查询余额\n4.退出系统');
+            switch (Number(select)) {
+                case 1:
+                    var deposit = Number(prompt('您需要存入多少钱'));
+                    if (deposit > 0) {
+                        surplus += deposit;
+                    } else {
+                        alert('您的存款金额不符合规范！')
+                        continue;
+                    }
+                    alert('存款成功！');
+                    continue;
+                case 2:
+                    var withdraw_money = Number(prompt('您需要取出多少钱')); if (withdraw_money > 0) {
+                        if (withdraw_money <= surplus) {
+                            surplus -= withdraw_money;
+                            alert('取款成功！');
+                        } else {
+                            alert('余额不足！');
+                            continue;
+                        }
+                    } else {
+                        alert('您的取款金额不符合规范！')
+                    }
+                    continue;
+                case 3:
+                    alert('您的当前余额为' + surplus + '元');
+                    continue;
+                case 4:
+                    alert('退出成功');
+                    exit = 1;
+                    continue;
+                default:
+                    alert('您的操作不符合规范！');
+                    continue;
+            }
+        } while (exit != 1);
+    </script>
 </head>
 
 <body>
-    <div><input type="button" value=" 世界上最好的朋友" onclick="alert('和小易天下第一好')"></div>
+
 </body>
 
 </html>
