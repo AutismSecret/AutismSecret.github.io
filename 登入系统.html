@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>登录</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		input,
+		button {
+			all: unset;
+		}
+
+		body {
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-image: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192), rgb(255, 204, 112));
+		}
+
+		.login {
+			width: 460px;
+			padding: 40px;
+			background-color: rgb(31, 41, 55);
+			box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+			border-radius: 10px;
+			color: #fff;
+			--c1: #03e9f4;
+		}
+
+		.login h2 {
+			font-size: 30px;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.login .inputBox {
+			position: relative;
+			margin-bottom: 50px;
+		}
+
+		.login .inputBox input {
+			width: 100%;
+			padding: 10px 0;
+			border-bottom: 1px solid #fff;
+		}
+
+		.login .inputBox label {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 10px 0;
+			pointer-events: none;
+			transition: .5s;
+		}
+
+		.login .inputBox input:focus~label,
+		.login .inputBox input:valid~label {
+			top: -20px;
+			color: var(--c1);
+			font-size: 12px;
+		}
+
+		.login button {
+			width: 120px;
+			height: 50px;
+			border-radius: 10px;
+			position: relative;
+			color: var(--c1);
+			padding: 3px;
+			cursor: pointer;
+			transition: .5s;
+			overflow: hidden;
+		}
+
+		.login button::before {
+			content: '';
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(0);
+
+			background-image: conic-gradient(var(--c1) 0deg, transparent 250deg);
+			animation: btn-anim 2s infinite linear;
+		}
+
+		@keyframes btn-anim {
+			0% {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			100% {
+				transform: translate(-50%, -50%) rotate(-360deg);
+			}
+		}
+
+		.login button span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: #111;
+			border-radius: 10px;
+			position: relative;
+		}
+
+		.login button:hover {
+			box-shadow: 0 0 5px var(--c1), 0 0 25px var(--c1), 0 0 50px var(--c1), 0 0 100px var(--c1);
+		}
+
+		.login button:hover::before,
+		.login button:hover span {
+			color: #fff;
+			background: var(--c1);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="login">
+		<h2>枫忆落雪</h2>
+		<form action="" onsubmit="login(event)">
+			<div class="inputBox">
+				<input type="text" required="" onfocus="showLabel(this)" onblur="hideLabel(this)">
+				<label for="">用户名</label>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="" onfocus="showLabel(this)" onblur="hideLabel(this)">
+				<label for="">密码</label>
+			</div>
+			<button type="submit">
+				<span>登入</span>
+			</button>
+		</form>
+	</div>
+
+	<script>
+		function showLabel(input) {
+			input.nextElementSibling.style.bottom = "30px";
+			input.nextElementSibling.style.fontSize = "12px";
+			input.nextElementSibling.style.color = "#03e9f4";
+		}
+
+		function hideLabel(input) {
+			if (input.value === "") {
+				input.nextElementSibling.style.bottom = "10px";
+				input.nextElementSibling.style.fontSize = "inherit";
+				input.nextElementSibling.style.color = "#fff";
+			}
+		}
+
+		function login(event) {
+			event.preventDefault();
+
+			var username = document.querySelector("input[type='text']").value;
+			var password = document.querySelector("input[type='password']").value;
+
+			if (username === "小易" && password === "xiaoyi") {
+				window.location.replace("xy.html");
+			}
+			else if (username === "捏捏" && password === "nienie") {
+				window.location.replace("nn.html");
+			}
+			else if (username === "熊佳丽" && password === "xiongjiali") {
+				window.location.replace("xjl.html");
+			}
+			else if (username === "齐雯婷" && password === "qiwenting") {
+				window.location.replace("qwt.html");
+			}
+			else if (username === "陈堂福" && password === "chentangfu") {
+				window.location.replace("ctf.html");
+			}
+			else if (username === "吴家乐" && password === "wujiale") {
+				window.location.replace("wjl.html");
+			}
+			else if (username === "唐苻茗" && password === "tangfuming") {
+				window.location.replace("tfm.html");
+			}
+			else if (username === "文庆峰" && password === "wenqingfeng") {
+				window.location.replace("wqf.html");
+			}
+			else if (username === "涂嘉剑" && password === "tujiajian") {
+				window.location.replace("tjj.html");
+			}
+			else if (username === "徐庆盛" && password === "xuqingsheng") {
+				window.location.replace("xqs.html");
+			}
+			else if (username === "小夏" && password === "xiaoxia") {
+				window.location.replace("xx.html");
+			}
+			else if (username === "焦梦云" && password === "jiaomengyun") {
+				window.location.replace("jmy.html");
+			}
+			else {
+				alert("用户名或密码错误");
+			}
+		}
+	</script>
+
+</body>
+
+</html>
